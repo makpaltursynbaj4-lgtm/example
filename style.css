@@ -1,0 +1,136 @@
+/* ... (Қалған стилдер бұрынғыдай қалады) ... */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    color: #5d3a9b;
+    margin-bottom: 40px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Картаға hover эффектісі */
+.card:hover {
+    transform: translateY(-10px) scale(1.03); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* -------------------------------------- */
+/* Тікбұрышты суреттерге арналған өзгеріс */
+/* -------------------------------------- */
+.product-image {
+    /* Дөңгелек емес, кәдімгідей тікбұрыш */
+    width: 100%; /* Картаның еніндей */
+    height: 180px; /* Биіктігі */
+    border-radius: 10px; /* Бұрыштарын аздап жұмырлау */
+    margin: 0 auto 15px;
+}
+/* -------------------------------------- */
+
+
+.product-title {
+    color: #5d3a9b;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.shop-button {
+    /* Карта ішіндегі "Заказ беру" батырмасы */
+    background-color: #5d3a9b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 90%; /* Карта ішінде жақсы көрінуі үшін */
+}
+
+.shop-button:hover {
+    background-color: #8a6be2; 
+    transform: scale(1.05);
+}
+
+/* Заказ беру батырмасының стилі (төменгі үлкен батырма) */
+.order-section {
+    margin-top: 40px;
+}
+
+.order-button {
+    /* Төменгі үлкен батырма */
+    background-color: #ff6b6b; 
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 107, 107, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+/* Төменгі үлкен батырмаға hover эффектісі */
+.order-button:hover {
+    background-color: #ff4757; 
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.7);
+    transform: translateY(-3px) scale(1.05); 
+}
+
+/* Адаптивтілік үшін (кіші экрандарға) */
+@media (max-width: 992px) {
+    .card-row {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.product-image {
+    width: 100%; 
+    height: 180px; /* Суреттің биіктігі, бұл картаның көлемін анықтайды */
+    /* ... басқа стильдер ... */
+    background-size: cover; /* Суретті картаның ішін толық толтыруға мәжбүрлейді */
+    background-position: center; 
+}
